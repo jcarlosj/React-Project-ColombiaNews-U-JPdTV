@@ -1,11 +1,15 @@
 import React, { Fragment } from 'react';
-
-import Header from './components/Header';           // Component
+/** Components */
+import Header from './components/Header';
+import SearchForm from './components/SearchForm';
 
 function App() {
   return (
     <Fragment>
         <Header title="Buscador de noticias" />
+        <div className="container">
+            <SearchForm />
+        </div>
     </Fragment>
   );
 
