@@ -1,15 +1,16 @@
 import React from 'react';
+import styles from './SearchForm.module.css';
 
 const SearchForm = () => {
     return (
-        <div className="row">
-            <div className="col s12 m8 offset">
+        <div className={ `${ styles .search } row` }>
+            <div className="col s12 m8 offset-m2">
                 <form>
-                    <h2>Noticia por categoría</h2>
+                    <h2 className={ styles .heading }>Noticia por categoría</h2>
                     <div className="input-field col s12">
                         <button 
                             type="button"
-                            className="btn-large amber darken-2"
+                            className={ `${ styles[ 'btn-block' ] } btn-large amber darken-2` }
                         >Buscar</button>
                     </div>
                 </form>
