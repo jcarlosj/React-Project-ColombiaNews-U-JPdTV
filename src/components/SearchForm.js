@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './SearchForm.module.css';       // CSS Module Stylesheet
 import useSelect from '../hooks/useSelect';         // Custom Hook
 
-const SearchForm = () => {
+const SearchForm = ({ setCategory }) => {           // Destructuring Props
 
     const OPTIONS = [
         /** 'value' va de acuerdo a los valores ofrecidos por News API 
@@ -19,15 +19,25 @@ const SearchForm = () => {
     /** Hooks Personalizados */
     const [ category, SelectNews ] = useSelect( 'general', OPTIONS );   // State, Interface
 
+    /** Methods */
+    const submitSearchNews = event => {
+        event .preventDefault();
+
+        setCategory( category );      // Actualizar State del Componente Padre
+
+    }
+
     return (
         <div className={ `${ styles .search } row` }>
             <div className="col s12 m8 offset-m2">
-                <form>
+                <form
+                    onSubmit={ submitSearchNews }
+                >
                     <h2 className={ styles .heading }>Noticia por categoría</h2>
                     <div className="input-field col s12">
                         <SelectNews />
                         <button 
-                            type="button"
+                            type="submit"
                             className={ `${ styles[ 'btn-block' ] } btn-large amber darken-2` }
                         >Buscar</button>
                     </div>

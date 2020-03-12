@@ -11,7 +11,7 @@ const useSelect = ( initialState, options ) => {
             <select
                 className="browser-default"
                 value={ state }
-                onChange={ event => setState( event .target.value ) /** Actualiza State */ }
+                onChange={ event => setState( event .target .value ) /** Actualiza State */ }
             >
                 { options .map( ( option ) => (     // Implicit return
                     <option key={ option .value } value={ option .value }>{ option .option }</option>
