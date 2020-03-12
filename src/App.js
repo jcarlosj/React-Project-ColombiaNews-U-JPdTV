@@ -2,13 +2,14 @@ import React, { Fragment, useState, useEffect } from 'react';
 /** Components */
 import Header from './components/Header';
 import SearchForm from './components/SearchForm';
+import NewsList from './components/NewsList';
 
 function App() {
 
   /** Hook: Define State */
   const 
     [ category, setCategory ] = useState( '' ),
-    [ news, setNews ] = useState( '' );
+    [ news, setNews ] = useState( [] );
 
   /** Hook: Tracking the state 'category' */
   useEffect( () => {
@@ -36,6 +37,9 @@ function App() {
         <div className="container">
             <SearchForm 
               setCategory={ setCategory }
+            />
+            <NewsList 
+              news={ news }
             />
         </div>
     </Fragment>
