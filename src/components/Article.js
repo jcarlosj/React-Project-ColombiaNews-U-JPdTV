@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Article.module.css';       // CSS Module Stylesheet
+import PropTypes from 'prop-types';
 
 /** Component */
 const Article = ({ article }) => {    // Destructuring Props
@@ -32,6 +33,11 @@ const Article = ({ article }) => {    // Destructuring Props
             </div>
         </div>
     );
+}
+
+/** Verificación de tipos */
+Article .propTypes = {
+    article: PropTypes .object .isRequired
 }
 
 export default Article;

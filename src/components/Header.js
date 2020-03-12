@@ -1,5 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
+/** Component */
 const Header = ({ title }) => {
     return(
         <nav>
@@ -10,6 +12,11 @@ const Header = ({ title }) => {
             </div>
         </nav>
     );
+}
+
+/** Verificación de tipos */
+Header .propTypes = {
+    title: PropTypes .string .isRequired
 }
 
 export default Header;

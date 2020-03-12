@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './SearchForm.module.css';       // CSS Module Stylesheet
 import useSelect from '../hooks/useSelect';         // Custom Hook
+import PropTypes from 'prop-types';
 
+/** Component */
 const SearchForm = ({ setCategory }) => {           // Destructuring Props
 
     const OPTIONS = [
@@ -45,6 +47,11 @@ const SearchForm = ({ setCategory }) => {           // Destructuring Props
             </div>
         </div>
     );
+}
+
+/** Verificación de tipos */
+SearchForm .propTypes = {
+    setCategory: PropTypes .func .isRequired
 }
 
 export default SearchForm;
