@@ -3,15 +3,19 @@ import React, { useState } from 'react';
 const useSelect = ( initialState, options ) => {
 
     /** Hooks: Define State */
-    const [ state, setState ] = useState( '' );
+    const [ state, setState ] = useState( initialState );
 
     /** Elemento de la Interface */
     const SelectNews = () => {
         return (
             <select
                 className="browser-default"
+                value={ state }
+                onChange={ event => setState( event .target.value ) /** Actualiza State */ }
             >
-                <option value="">Seleccione...</option>
+                { options .map( ( option ) => (     // Implicit return
+                    <option key={ option .value } value={ option .value }>{ option .option }</option>
+                ))}
             </select>
         );
     }

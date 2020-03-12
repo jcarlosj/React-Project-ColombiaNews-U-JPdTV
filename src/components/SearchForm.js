@@ -4,8 +4,20 @@ import useSelect from '../hooks/useSelect';         // Custom Hook
 
 const SearchForm = () => {
 
+    const OPTIONS = [
+        /** 'value' va de acuerdo a los valores ofrecidos por News API 
+         *          (business, entertainment, general, health, science, sports, technology) */
+        { option: 'Negocios', value: 'business' }, 
+        { option: 'Entretenimiento', value: 'entertainment' }, 
+        { option: 'General', value: 'general' }, 
+        { option: 'Salud', value: 'health' }, 
+        { option: 'Ciencia', value: 'science' }, 
+        { option: 'Deportes', value: 'sports' }, 
+        { option: 'Tecnología', value: 'technology' }
+    ];
+
     /** Hooks Personalizados */
-    const [ category, SelectNews ] = useSelect();   // State, Interface
+    const [ category, SelectNews ] = useSelect( 'general', OPTIONS );   // State, Interface
 
     return (
         <div className={ `${ styles .search } row` }>
