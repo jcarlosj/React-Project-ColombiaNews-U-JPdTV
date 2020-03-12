@@ -1,5 +1,7 @@
 import React from 'react';
+import styles from './Article.module.css';       // CSS Module Stylesheet
 
+/** Component */
 const Article = ({ article }) => {    // Destructuring Props
 
     const { title, description, source, urlToImage, url } = article; 
@@ -8,7 +10,7 @@ const Article = ({ article }) => {    // Destructuring Props
     const image = urlToImage
         ?   <div className="card-image">
                 <img src={ urlToImage } alt={ title } />
-                <span className="card-title">{ source .name }</span>
+                <span className={ `card-title ${ styles .title }` }>{ source .name }</span>
             </div>
         :   null;
 
@@ -16,7 +18,7 @@ const Article = ({ article }) => {    // Destructuring Props
         <div className="col s12 m6 l4">
             <div className="card">
                 { image }
-                <div className="card-content">
+                <div className={ `card-content ${ styles .description }` }>
                     <p>{ description }</p>
                 </div>
                 <div className="card-action">
