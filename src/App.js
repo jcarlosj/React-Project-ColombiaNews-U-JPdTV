@@ -19,7 +19,7 @@ function App() {
         const
             countryKey = 'co',      // Colombia
             apiKey = '86c99ab8ccd742169c4cc39b5d28e0be',
-            url = `http://newsapi.org/v2/top-headlines?country=${ countryKey }&apiKey=${ apiKey }`,
+            url = `http://newsapi.org/v2/top-headlines?country=${ countryKey }&category=${ category }&apiKey=${ apiKey }`,
             response = await fetch( url ),
             news = await response .json();
 
