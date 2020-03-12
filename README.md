@@ -1,3 +1,10 @@
+# News from Colombia
+
+Este proyecto consume la API https://newsapi.org/ a través de la cual podemos consultar las noticias de Colombia, como funcionalidad adicional podemos elegir la categoría de noticias que deseamos consultar al pulsar el botón de búsqueda.
+
+La funcionalidad se desarrolla haciendo uso de conceptos como Components (Carga Condicional), Props, State, Hook (useState, useEffect), Hooks Personalizados y Modulos de Hojas de estilo para Componentes en React. (v.16.12.0). 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

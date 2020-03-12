@@ -1,0 +1,12 @@
+.title {
+    background-color: #ffa000;
+    font-family: 'News Cycle', sans-serif;
+    font-weight: bold;
+    padding: 4px 12px ! important;
+}
+
+.description {
+    font-family: 'News Cycle', sans-serif; 
+    padding: 4px 12px ! important;
+    font-size: 1.3rem; 
+}
